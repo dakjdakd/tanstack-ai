@@ -45,6 +45,10 @@
     "./worker": {
       "types": "./dist/esm/worker.d.ts",
       "import": "./dist/esm/worker.js"
+    },
+    "./ag-ui": {
+      "types": "./dist/esm/ag-ui.d.ts",
+      "import": "./dist/esm/ag-ui.js"
     }
   },
   "scripts": {
@@ -58,7 +62,12 @@
     "test:lib:dev": "pnpm test:lib --watch",
     "test:types": "tsc"
   },
+  "dependencies": {
+    "@ag-ui/core": "1.0.0",
+    "@ag-ui/encoder": "1.0.0"
+  },
   "devDependencies": {
+    "@ag-ui/client": "1.0.0",
     "@tanstack/ai": "workspace:*",
     "@tanstack/ai-persistence": "workspace:*",
     "@vitest/coverage-v8": "4.1.10",
